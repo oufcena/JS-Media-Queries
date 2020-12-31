@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body onresize="MQ()">
+
+<h1>Media Queries using JS</h1>
+
+<p id="demo"></p>
+
+<script>
+function MQ() {
+  var JSX = document.body;
+  
+  document.getElementById("demo").innerHTML = 
+  `Width: ${innerWidth} <br>
+   Height: ${innerHeight}`;
+   
+  if(innerWidth >= 500) {
+    JSX.style.cssText += `
+      background: lightblue;
+    `;
+  } else {
+    JSX.style.cssText += `
+      background: pink;
+    `;
+  }
+}
+</script>
+
+</body>
+</html>
